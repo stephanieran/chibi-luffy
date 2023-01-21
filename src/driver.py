@@ -4,13 +4,13 @@ from instagrapi import Client
 import PicManager
 
 # script to add all images in images directory into a .txt file
-pm = PicManager.PicManager("/Users/stephanieran/chibi-luffy/picList.txt")
-directory = "/Users/stephanieran/chibi-luffy/RedditImageScraper/images"
+pm = PicManager.PicManager("chibiLuffy/src/resources/picList.txt")
+directory = "chibiLuffy/redditScraper/images"
 
 
 pm.getList()
 pics = pm.getPics(3)
-pm.resizePics("/Users/stephanieran/chibi-luffy/RedditImageScraper/images")
+pm.resizePics("chibiLuffy/redditScraper/images")
 pm.rewriteFile() # gets rid of previously posted photos
 
 bot = Client()
